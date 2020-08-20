@@ -6,10 +6,12 @@ public class GunController : MonoBehaviour
 {
     public GameObject player;
     public GameObject[] prefabs;
+    public GameObject selectedObject;
 
     private Vector3 playerPos, playerDir;
     private Quaternion playerRotation;
     float spawnDistance = 10;
+    int inventoryIndex = 0;
 
     Vector3 spawnPos;
 
@@ -26,12 +28,22 @@ public class GunController : MonoBehaviour
         playerRotation = player.transform.rotation;
         spawnPos = playerPos + playerDir * spawnDistance;
 
-        if (Input.GetKeyDown("space"))
+        //shoot item
+        if (Input.GetMouseButtonDown(0))
         {
-            GameObject prefab = Instantiate(prefabs[0], spawnPos, playerRotation);
+            GameObject prefab = Instantiate(prefabs[inventoryIndex], spawnPos, playerRotation);
            Vector3 temp = prefab.transform.position;
-            temp.y = prefabs[0].transform.position.y;
+            temp.y = prefabs[inventoryIndex].transform.position.y;
             prefab.transform.position = temp;
         }
+        else if (Input.GetMouseButtonDown(1) && selectedObject != null)
+        {
+            Destroy(selectedObject);
+        }
+    }
+
+    public void ChangeItem(int index)
+    {
+        inventoryIndex = index;
     }
 }
