@@ -6,6 +6,14 @@ TagManager:
   tags:
   - Fire
   - MoneyCounter
+  - Duck
+  - LilyPad
+  - Rat
+  - Dog
+  - Human
+  - Husbandry
+  - Cat
+  - Chicken
   layers:
   - Default
   - TransparentFX

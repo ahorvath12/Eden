@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class ItemHandler : MonoBehaviour
 {
-    public int index;
+    public GameObject cross, outline, wallet;
+    public int index, val;
     public KeyCode key;
     public bool startHighlighted = false;
     public KeyCode[] otherKeys;
 
     private Button button;
-    private GameObject gun;
+    private GunController gun;
 
     private void Awake()
     {
@@ -20,10 +21,12 @@ public class ItemHandler : MonoBehaviour
     
     void Start()
     {
-        gun = GameObject.Find("Gun");
+        gun = GameObject.Find("Gun").GetComponent<GunController>();
+        outline.SetActive(false);
         if (startHighlighted)
         {
             FadeToColor(button.colors.pressedColor);
+            outline.SetActive(true);
             button.onClick.Invoke();
         }
     }
@@ -35,13 +38,21 @@ public class ItemHandler : MonoBehaviour
         {
             FadeToColor(button.colors.pressedColor);
             button.onClick.Invoke();
-            gun.GetComponent<GunController>().ChangeItem(index);
+            gun.ChangeItem(index, val);
+            outline.SetActive(true);
         }
         //other button is active
         else if (Input.GetKeyDown(otherKeys[0]) || Input.GetKeyDown(otherKeys[1]) || Input.GetKeyDown(otherKeys[2]))
         {
+            outline.SetActive(false);
             FadeToColor(button.colors.normalColor);
         }
+
+        //cross out item if wallet amount is too low
+        if (wallet.GetComponent<WalletManager>().GetBalance() < val)
+            cross.SetActive(true);
+        else
+            cross.SetActive(false);
     }
 
     //allow changing of button color when active

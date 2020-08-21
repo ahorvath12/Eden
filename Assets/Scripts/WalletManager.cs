@@ -5,14 +5,16 @@ using UnityEngine.UI;
 
 public class WalletManager : MonoBehaviour
 {
+    public int startMoney = 20;
     public int maxMoney = 9999;
 
     private Text text;
-    private int currentMoney = 0;
+    private int currentMoney;
 
     // Start is called before the first frame update
     void Start()
     {
+        currentMoney = startMoney;
         text = GetComponent<Text>();
         text.text = currentMoney.ToString();
     }
@@ -21,6 +23,11 @@ public class WalletManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public int GetBalance()
+    {
+        return currentMoney;
     }
 
     public void AddAmount(int amount)
