@@ -11,7 +11,7 @@ public class GunController : MonoBehaviour
     private GameObject moneyCounter;
     private Vector3 playerPos, playerDir;
     private Quaternion playerRotation;
-    float spawnDistance = 10;
+    float spawnDistance = 100;
     int inventoryIndex = 0, cost;
     int[] spawnPoints = new int[] { 1, 6, 20, 40 };
 
@@ -35,9 +35,10 @@ public class GunController : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && cost < moneyCounter.GetComponent<WalletManager>().GetBalance())
         {
             GameObject prefab = Instantiate(prefabs[inventoryIndex], spawnPos, playerRotation);
-            Vector3 temp = prefab.transform.position;
-            temp.y = prefabs[inventoryIndex].transform.position.y;
-            prefab.transform.position = temp;
+            //Vector3 temp = prefab.transform.position;
+            GetComponent<ShootGun>().ReceiveCommand(prefab);
+            //temp.y = prefabs[inventoryIndex].transform.position.y;
+            //prefab.transform.position = temp;
             gameManager.GetComponent<EnvironmentManager>().UpdateIndex(spawnPoints[inventoryIndex]);
             moneyCounter.GetComponent<WalletManager>().SubtractAmount(cost);
         }
