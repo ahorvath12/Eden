@@ -12,11 +12,14 @@ mumble - https://freesound.org/people/dersuperanton/sounds/435876/
 chicken - https://freesound.org/people/JarredGibb/sounds/233093/
 quack - https://freesound.org/people/DrMaysta/sounds/418509/
 bird chirp - https://freesound.org/people/InspectorJ/sounds/339326/
+shooting sound - https://freesound.org/people/JZProductions/sounds/147377/
+thud - https://freesound.org/people/juskiddink/sounds/108617/
 
 Tutorials & Resources:
 Load Screen - https://www.youtube.com/watch?v=fxxoACKCWVo
 Flat color material - https://www.youtube.com/watch?v=WO4BrPZ1P3A
 Inventory system - https://www.youtube.com/watch?v=w6_fetj9PIw
+Highlight objects - https://www.youtube.com/watch?v=7ybz28Py0-U
 Fog sprite shader - https://answers.unity.com/questions/1244402/trying-to-have-sprites-affected-by-fog-without-hav.html
 Keyboard control buttons - https://answers.unity.com/questions/934527/ui-button-click-through-keyboardcode.html
 3D Projectile Motion - https://unity3d.college/2017/06/30/unity3d-cannon-projectile-ballistics/

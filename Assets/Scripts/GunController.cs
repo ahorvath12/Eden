@@ -37,6 +37,7 @@ public class GunController : MonoBehaviour
         {
             GameObject prefab = Instantiate(prefabs[inventoryIndex], spawnPos, playerRotation);
             GetComponent<ShootGun>().ReceiveCommand(prefab);
+            GetComponent<AudioSource>().Play();
             gameManager.GetComponent<EnvironmentManager>().UpdateIndex(spawnPoints[inventoryIndex]);
             moneyCounter.GetComponent<WalletManager>().SubtractAmount(cost);
         }

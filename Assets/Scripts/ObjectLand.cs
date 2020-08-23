@@ -29,6 +29,7 @@ public class ObjectLand : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
+            GetComponent<AudioSource>().Play();
             GetComponent<Rigidbody>().isKinematic = true;
             GetComponent<Rigidbody>().detectCollisions = false;
             GetComponent<BoxCollider>().enabled = false;
