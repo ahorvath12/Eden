@@ -206,7 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoneyCounter: {fileID: 0}
   toAdd: 20
-  waitPeriod: 2
+  waitPeriod: 45
 --- !u!65 &7048098907274124080
 BoxCollider:
   m_ObjectHideFlags: 0

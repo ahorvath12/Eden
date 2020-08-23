@@ -40,11 +40,15 @@ public class PauseGame : MonoBehaviour
             paused = !paused;
             if (paused)
             {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 PauseAll(true);
                 Time.timeScale = 0f;
             }
             else
             {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
                 PauseAll(false);
                 Time.timeScale = 1f;
             }
@@ -64,9 +68,13 @@ public class PauseGame : MonoBehaviour
         }
     }
     
+    
     public void Resume()
     {
         PauseAll(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Time.timeScale = 1f;
     }
 
     public void ExitGame()

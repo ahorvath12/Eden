@@ -43,11 +43,7 @@ public class ShootGun : MonoBehaviour
     {
         var velocity = BallisticVelocity(point, angle);
         Debug.Log("Firing at " + point + " velocity " + velocity);
-
-        //Vector3 tempTransform = player.transform.position;
-        //Vector3 tempDir = player.transform.forward;
-        //Vector3 spawnPos = tempTransform + tempDir * spawnDist;
-        //cannonballInstance.transform.position = spawnPos;
+        
         cannonballInstance.transform.position = spawnPos.transform.position;
         cannonballInstance.velocity = velocity;
     }

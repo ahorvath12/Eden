@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2378407415575598255}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.06903375, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 26.94334, y: 26.94334, z: 26.94334}
   m_Children: []
   m_Father: {fileID: 9099024597971134920}
   m_RootOrder: 0
@@ -186,7 +186,7 @@ Transform:
   m_GameObject: {fileID: 2945051103845827878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.54, y: -0.49, z: -8.285889}
-  m_LocalScale: {x: 26.943344, y: 26.943344, z: 26.943344}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 408375402133485114}
   m_Father: {fileID: 0}
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoneyCounter: {fileID: 0}
   toAdd: 6
-  waitPeriod: 2
+  waitPeriod: 15
 --- !u!65 &1249240229511244280
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -218,8 +218,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.10181141, y: 0.13455448, z: 0.11107639}
-  m_Center: {x: -0.00072843145, y: 0.085123956, z: -0.007191388}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -0.00072843145, y: -1.5, z: -0.007191388}
 --- !u!54 &6707846060618041020
 Rigidbody:
   m_ObjectHideFlags: 0

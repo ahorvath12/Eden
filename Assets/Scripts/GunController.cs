@@ -30,21 +30,21 @@ public class GunController : MonoBehaviour
         playerDir = player.transform.forward;
         playerRotation = player.transform.rotation;
         spawnPos = playerPos + playerDir * spawnDistance;
+        
 
         //shoot item
-        if (Input.GetMouseButtonDown(0) && cost < moneyCounter.GetComponent<WalletManager>().GetBalance())
+        if (Input.GetMouseButtonDown(0) && cost <= moneyCounter.GetComponent<WalletManager>().GetBalance())
         {
             GameObject prefab = Instantiate(prefabs[inventoryIndex], spawnPos, playerRotation);
-            //Vector3 temp = prefab.transform.position;
             GetComponent<ShootGun>().ReceiveCommand(prefab);
-            //temp.y = prefabs[inventoryIndex].transform.position.y;
-            //prefab.transform.position = temp;
             gameManager.GetComponent<EnvironmentManager>().UpdateIndex(spawnPoints[inventoryIndex]);
             moneyCounter.GetComponent<WalletManager>().SubtractAmount(cost);
         }
         //remove item
         else if (Input.GetMouseButtonDown(1) && selectedObject != null)
         {
+            gameManager.GetComponent<EnvironmentManager>().UpdateIndex(2 * -1);
+            moneyCounter.GetComponent<WalletManager>().AddAmount(5);
             Destroy(selectedObject);
             gameManager.GetComponent<EnvironmentManager>().UpdateIndex(-1 * spawnPoints[inventoryIndex]);
         }

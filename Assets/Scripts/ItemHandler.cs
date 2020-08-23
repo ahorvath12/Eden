@@ -28,6 +28,7 @@ public class ItemHandler : MonoBehaviour
             FadeToColor(button.colors.pressedColor);
             outline.SetActive(true);
             button.onClick.Invoke();
+            gun.ChangeItem(index, val);
         }
     }
     

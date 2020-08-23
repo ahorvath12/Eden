@@ -1,0 +1,23 @@
+Sound:
+Main "Sacred Temple" - https://www.playonloop.com/2014-music-loops/sacred-temple/
+coin - https://freesound.org/people/bradwesson/sounds/135936/
+bark 1 - https://freesound.org/people/kwahmah_02/sounds/277058/
+bark 2 - https://freesound.org/people/crazymonke9/sounds/418106/
+meow - https://freesound.org/people/skymary/sounds/412017/
+oink - https://freesound.org/people/JarredGibb/sounds/233158/
+moo - https://freesound.org/people/cmusounddesign/sounds/84697/
+horse whinny - https://freesound.org/people/InspectorJ/sounds/419231/
+laugh - https://freesound.org/people/Yudena/sounds/377588/
+mumble - https://freesound.org/people/dersuperanton/sounds/435876/
+chicken - https://freesound.org/people/JarredGibb/sounds/233093/
+quack - https://freesound.org/people/DrMaysta/sounds/418509/
+bird chirp - https://freesound.org/people/InspectorJ/sounds/339326/
+
+Tutorials & Resources:
+Load Screen - https://www.youtube.com/watch?v=fxxoACKCWVo
+Flat color material - https://www.youtube.com/watch?v=WO4BrPZ1P3A
+Inventory system - https://www.youtube.com/watch?v=w6_fetj9PIw
+Fog sprite shader - https://answers.unity.com/questions/1244402/trying-to-have-sprites-affected-by-fog-without-hav.html
+Keyboard control buttons - https://answers.unity.com/questions/934527/ui-button-click-through-keyboardcode.html
+3D Projectile Motion - https://unity3d.college/2017/06/30/unity3d-cannon-projectile-ballistics/
+Font - https://www.fontsquirrel.com/fonts/Silkscreen?q%5Bterm%5D=pixel&q%5Bsearch_check%5D=Y
