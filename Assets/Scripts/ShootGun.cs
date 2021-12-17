@@ -42,8 +42,7 @@ public class ShootGun : MonoBehaviour
     private void FireCannonAtPoint(Vector3 point)
     {
         var velocity = BallisticVelocity(point, angle);
-        Debug.Log("Firing at " + point + " velocity " + velocity);
-        
+
         cannonballInstance.transform.position = spawnPos.transform.position;
         cannonballInstance.velocity = velocity;
     }
@@ -63,5 +62,5 @@ public class ShootGun : MonoBehaviour
         return velocity * dir.normalized; // Return a normalized vector.
     }
 
-    
+
 }
